@@ -1,6 +1,9 @@
 #!/usr/bin/bash
 
 import cmd
+"""
+A command line interface (CLI) for the HBNB project.
+"""
 
 class HBNBCommand(cmd.Cmd):
     """A command line interface (CLI) for the HBNB project."""
