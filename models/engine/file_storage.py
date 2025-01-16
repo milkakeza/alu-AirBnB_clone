@@ -48,7 +48,7 @@ class FileStorage:
             try:
                 with open(self.__file_path, "w") as f:
                     json.dump(obj_dict, f, indent=4)
-            except Exception:
+            except FileNotFoundError:
                 pass
 
     def reload(self):
@@ -62,6 +62,6 @@ class FileStorage:
                 obj_dict = json.load(f)
                 for key, value in obj_dict.items():
                     self.__objects[key] = eval(value["__class__"])(**value)
-        except Exception:
+        except FileNotFoundError:
             pass
         
