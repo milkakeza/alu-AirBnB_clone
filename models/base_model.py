@@ -49,8 +49,8 @@ class BaseModel:
         datetime.
         """
         self.updated_at = datetime.now()
+        models.storage.new(self)
         models.storage.save()
-        return models.storage.save() is not None
 
     def to_dict(self):
         """
