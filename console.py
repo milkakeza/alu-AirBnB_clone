@@ -4,7 +4,7 @@ import cmd
 import shlex
 from models.base_model import BaseModel
 from models import storage
-
+from models.user import User
 
 class HBNBCommand(cmd.Cmd):
     """A command line interface (CLI) for the HBNB project."""
