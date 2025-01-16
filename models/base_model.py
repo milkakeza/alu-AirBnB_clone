@@ -50,7 +50,7 @@ class BaseModel:
         """
         self.updated_at = datetime.now()
         models.storage.save()
-        return True
+        return models.storage.save() is not None
 
     def to_dict(self):
         """
