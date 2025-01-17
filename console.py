@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import cmd
+from models.base_model import BaseModel
 """
 A command line interface (CLI) for the HBNB project.
 """
@@ -8,6 +9,7 @@ A command line interface (CLI) for the HBNB project.
 class HBNBCommand(cmd.Cmd):
     """A command line interface (CLI) for the HBNB project."""
     prompt = '(hbnb) '
+    valid_class{"BaseModel": BaseModel}
 
     def do_EOF(self, line):
 
