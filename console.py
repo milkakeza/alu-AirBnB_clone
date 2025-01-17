@@ -11,6 +11,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
     """A command line interface (CLI) for the HBNB project."""
     prompt = '(hbnb) '
@@ -127,7 +128,6 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """Does nothing on an empty input line."""
         pass
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
