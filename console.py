@@ -59,7 +59,7 @@ class HBNBCommand(cmd.Cmd):
             key = "{}.{}".format(command[0], command[1])
             if key in objects:
                 obj = objects[key]
-                print("{}".format(obj.id))
+                print("User {}".format(obj.id))
             else:
                 print("** no instance found **")
     def do_destroy(self, arg):
