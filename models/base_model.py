@@ -6,6 +6,7 @@ import uuid
 import models
 from datetime import datetime
 
+
 class BaseModel:
     """
     BaseModel class
@@ -33,9 +34,8 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             models.storage.new(self)
-
-
-    def __str__(self):
+            
+        def __str__(self):
         """
         Returns a string representation of the BaseModel instance,
         including the class name, id, created_at, and updated_at.
