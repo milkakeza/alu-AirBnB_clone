@@ -19,11 +19,11 @@ class HBNBCommand(cmd.Cmd):
         "BaseModel": BaseModel,
         "User": User,
         "Place": Place,
-       "State": State,
-      "City": City,
-    "Amenity": Amenity,
-    "Review": Review,
-    }
+        "State": State,
+        "City": City,
+        "Amenity": Amenity,
+        "Review": Review,
+        }
 
     def do_EOF(self, line):
         """Handles the EOF signal to exit the program."""
@@ -61,7 +61,6 @@ class HBNBCommand(cmd.Cmd):
                 print(objects[key])
             else:
                 print("** no instance found **")
-
     def do_destroy(self, arg):
         """Deletes an instance based on class name and id."""
         command = shlex.split(arg)
@@ -95,7 +94,7 @@ class HBNBCommand(cmd.Cmd):
                 if key.split('.')[0] == command[0]:
                     print(str(obj))
 
-    def do_update(self, arg):
+     def do_update(self, arg):
         """Updates an instance based on the class name and id."""
         command = shlex.split(arg)
         if len(command) == 0:
