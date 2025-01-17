@@ -14,7 +14,7 @@ class TestUser_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the User class."""
 
     def test_no_args_instantiates(self):
-    """Test if User initializes correctly without arguments."""
+        """Test if User initializes correctly without arguments."""
 
         self.assertEqual(User, type(User()))
 
@@ -33,10 +33,10 @@ class TestUser_instantiation(unittest.TestCase):
         self.assertEqual(str, type(User().id))
 
     def test_created_at_is_public_datetime(self):
-    """
-    Test that the 'created_at' attribute of a User instance is a
-    publicly accessible datetime object.
-    """
+        """
+        Test that the 'created_at' attribute of a User instance is a
+        publicly accessible datetime object.
+        """
 
         self.assertEqual(datetime, type(User().created_at))
 
