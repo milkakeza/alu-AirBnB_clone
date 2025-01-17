@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/bash
 
 import cmd
 import shlex
