@@ -61,6 +61,7 @@ class HBNBCommand(cmd.Cmd):
                 print(objects[key])
             else:
                 print("** no instance found **")
+    
     def do_destroy(self, arg):
         """Deletes an instance based on class name and id."""
         command = shlex.split(arg)
@@ -78,7 +79,6 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
             else:
                 print("** no instance found **")
-
 
     def do_all(self, arg):
         """Prints all string representation of all instances."""
@@ -129,5 +129,4 @@ class HBNBCommand(cmd.Cmd):
         pass
 
 if __name__ == '__main__':
-    HBNBCommand().cmdloop()
-    
+    HBNBCommand().cmdloop() 
