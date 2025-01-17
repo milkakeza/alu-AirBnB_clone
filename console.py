@@ -47,21 +47,18 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, arg):
         """Prints the string representation of an instance."""
-        command = shlex.split(arg)
-        if len(command) == 0:
-            print("** class name missing **")
-        elif command[0] not in self.valid_classes:
-            print("** class doesn't exist **")
-        elif len(command) < 2:
-            print("** instance id missing **")
-        else:
-            objects = storage.all()
-            key = "{}.{}".format(command[0], command[1])
-            if key in objects:
-                obj = objects[key]
-                print("OK")
-            else:
-                print("** no instance found **")
+        args = arg.split()
+        if not validate_classname(args, check_id=True):
+            return
+
+        instance_objs = storage.all()
+        key = "{}.{}".format(args[0], args[1])
+        req_instance = instance_objs.get(key, None)
+        if req_instance is None:
+            print("** no instance found **")
+            return
+        print(req_instance)
+
     def do_destroy(self, arg):
         """Deletes an instance based on class name and id."""
         command = shlex.split(arg)
