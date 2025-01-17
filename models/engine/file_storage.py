@@ -10,14 +10,8 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-"""
-JSON module
-"""
 
-from models.base_model import BaseModel
-"""
-BaseModel class import
-"""
+
 class FileStorage:
     """
     Class FileStorage
@@ -71,4 +65,3 @@ class FileStorage:
                     self.__objects[key] = eval(value["__class__"])(**value)
         except FileNotFoundError:
             pass
-        
