@@ -79,7 +79,6 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** no instance found **")
 
-
     def do_all(self, arg):
         """Prints all string representation of all instances."""
         objects = storage.all()
@@ -94,7 +93,7 @@ class HBNBCommand(cmd.Cmd):
                 if key.split('.')[0] == command[0]:
                     print(str(obj))
 
-     def do_update(self, arg):
+    def do_update(self, arg):
         """Updates an instance based on the class name and id."""
         command = shlex.split(arg)
         if len(command) == 0:
